@@ -1,0 +1,325 @@
+<!-- HTML INTERVIEW QUESTIONS -->
+
+<!-- what is html ?
+  * html stands for hyper text markup language for creating
+   structure and content of the webpage
+
+  * It use set of tag and define the elements and component of webpage
+   
+  * And it's enclosed with angle bracket
+-->
+
+<!-- What is Doctype? 
+  * The HTML document type declaration is also known doctype
+    is the first line of code required for html and xhtml.
+  * The doctype tell the browser which version of html used on the web page 
+ -->
+
+<!-- what is keys in html? 
+  * To specify the html elements by using the selectors
+  * .class -> we can used for duplicate 
+  * .Id -> we can't duplicate
+
+  * html Tag -> Take enclosed with angle bracket and we have
+    tag like eg. <a>,<h1>,<h6>,<span>,<img>
+  
+  * html attributes -> Which are passed inside the html tags
+    for eg. <a href="" /> inside anchor tag have attribute called href='' 
+ 
+  * html elements -> Two combine the attribute and tags are called html elements
+
+  Element eg. <a href="https://www.example.com">Visit Example</a>
+-->
+
+<!-- what is DOM in html?
+  Dom stands for Document Object Model 
+
+  * Access and modify the content of html element
+  * we can add and remove elements from the page
+  * we can change the styling of content
+  * Respond to user Interface Interaction such, as clicking and keyboard events
+  * updating dynamically content of the page without full page reload
+ -->
+
+<!-- what is form in html and uses?
+  Form is used for validation from the users 
+  eg. email login
+
+  Form tags -> three types of tags
+  * label
+  * input
+  * button
+
+
+  -> what is label?
+  * It tell the users to enter the details
+
+  -> what is input?
+  * It plays a role to getting info from the users and required
+  
+  -> what is button?
+  * If the users information is correct if send to the server and 
+  get the account
+
+  -> how Input types in html?
+  * text
+  * number
+  * password
+  * radio
+  * tel
+  * button
+  * checkbox etc..,
+ -->
+
+<!-- 
+  what is ordered list and unOrder list
+
+  ->ordered list
+  * A -> Alphabet for capital Letters
+  * a -> Alphabet for small Letters
+  * I -> Roman for capital eg.I, II, III
+  * i -> Roman for small eg. i, ii, iii
+  * 1 -> Number by default
+  * none -> It not show anything before the listItem(li)
+
+   ->unOrdered list
+  * circle -> it gives circle (○) 
+  * square -> it gives circle (□)
+  * bullet -> it gives circle (•)
+  * none -> It not show anything before the listItem(li)
+  -->
+
+<!-- what is Semantic tags ?
+    It means gives meaning name like 
+    eg. <header>, <nav>, <main>, 
+        <article>, <section>, and <footer>
+   -->
+
+<!-- -- X -- -->
+
+<!-- CSS Interview Questions -->
+
+<!-- what is css?
+     css stands for cascading stylesheet.It's a stylesheet
+     language used to describe the presentation and styling of 
+     web documents written in HTML or XML 
+-->
+
+<!-- How many ways to write the css file?
+     There are three ways to write the css file
+     * Inline style
+     * Internal style
+     * External style 
+
+    -> Inline style
+      * First initial with attribute(style = "")
+      * Even thought it have Internal style or External style
+      * it execute the Inline style
+      * It used in the single line styling
+    
+    -> Internal style
+      * If we required some line of styling use the 
+       Internal styling
+      * And it give second priority Internal styling
+      * It present in the <head><style></style</head>
+    
+    -> External style
+      * If we styling the multiple webpage on the browser
+      Eg. <head>
+           <link ref = 'stylesheet'  href= "style.css"/>
+
+-->
+
+<!-- What is BoxModel in Css?
+     The webpage is contain BoxModel it means inside the 
+     Rectangular BoX
+     
+     - margin
+        - border
+          - padding
+            - content
+ -->
+
+<!-- What is float and clear  in css
+  In this example, the image will float to the right 
+  in the paragraph, and the text in the paragraph will 
+  wrap around the image
+
+  Eg:
+    .para {
+        float: right; // if we need left inside use only float:left;
+        padding: 10px;
+        border: 3px solid #000;
+      }
+
+      .parent {
+        border: 2px solid black;
+        clear: right; // if we need left top means add the clear:left
+      }
+
+    <div class="para">Div2</div>
+    <div class="parent">
+      Lorem ipsum, dolor sit amet consectetur 
+      adipisicing elit. Maxime, quasi.
+    </div>
+-->
+
+<!-- What is Selectors?
+     In css we have five types selectors
+     
+    * simple selectors
+    * combinator selectors
+    * pseudo element
+    * pseudo classes
+    * attribute selectors
+
+    -> Simple Selectors
+       In simple selectors based on the 'id' and 'class'
+    
+    -> combinator Selectors
+      There are Four type selectors
+      * Descendent Selector
+      * Child Selector
+      * Adjacent Sibling Selectors
+      * General Sibling Selectors
+
+      -> Descendent Selector(space)
+      It give style inside the parent Div only and it not outside
+      the div 
+      Eg.
+      <style>
+       div p{
+           background-color: red;
+        }
+      </style>
+
+      <div>
+        <p>para1</p>
+        <p>para2</p>
+        <p>para3</p>
+          <span>
+             <p>para4</p>
+             <p>para5</p>
+          </span>
+      </div>
+      <p>para6</p>
+
+    -> Child Selectors(>)
+     Child selectors are used to target elements that
+     are direct children of a specific parent element
+
+      Eg.
+      <style>
+       div > p{
+           background-color: red;
+        }
+      </style>
+
+      <div>
+        <p>para1</p>
+        <p>para2</p>
+        <p>para3</p>
+          <span>
+             <p>para4</p>
+             <p>para5</p>
+          </span>
+      </div>
+      <p>para6</p>
+
+      -> Adjacent Sibling Selectors (+)
+         It works only  outside the div next para
+
+       Eg:
+      <style>
+       div + p{
+           background-color: red;
+        }
+      </style>
+
+      <div>
+        <p>para1</p>
+        <p>para2</p>
+        <p>para3</p>
+          <span>
+             <p>para4</p>
+             <p>para5</p>
+          </span>
+      </div>
+      <p>para6</p>
+
+     -> General Sibling Selectors (+)
+         It works only  outside the div next para
+
+       Eg:
+       <style>
+       div + p{
+           background-color: red;
+        }
+      </style>
+
+      <div>
+        <p>para1</p>
+        <p>para2</p>
+        <p>para3</p>
+          <span>
+             <p>para4</p>
+             <p>para5</p>
+          </span>
+      </div>
+      <p>para6</p>
+-->
+
+<!-- Pseudo-classes 
+    If the users click the link means it shows colors
+    to users.
+    <style>
+      a:link{
+        color: aqua;
+      }
+       a:hover{
+        color: yellow;
+      }
+      a:active{
+        color: red;
+      }
+      a:visited{
+        color: green;
+      }
+    </style>
+
+    <a href="https://www.swiggy.com">www.swiggy.com</a>
+-->
+
+<!-- Pseudo::Elements 
+     If we need to highlight some words or single words 
+     we can use the pseudo elements
+
+      p::selection{
+        background-color: rgb(255, 210, 30);
+        color: #fff;
+      }
+
+      p::first-line{
+         font-size: 3rem; 
+      }
+
+      p::first-letter{
+         font-size: 3rem; 
+      } 
+
+      p::before{
+        content: 'sala ';
+      }
+      p:hover::after{
+        content: 'hulk';
+        font-size: 5rem;
+      }
+-->
+
+<!-- What is Box-Sizing?
+   * The box-sizing property controls total elements
+     width and height calculated.
+   * The two values are 
+      -> content-box(default) 
+      -> border-box (we changing the values);
+-->
