@@ -90,12 +90,13 @@
   -->
 
 <!-- what is Semantic tags ?
-    It means gives meaning name like 
+    It means gives meaningFull name and it easier for both developers 
+    and browsers to understand the role of different sections within the webpage
     eg. <header>, <nav>, <main>, 
         <article>, <section>, and <footer>
    -->
 
-<!-- -- X -- -->
+<!--  X  -->
 
 <!-- CSS Interview Questions -->
 
@@ -131,7 +132,7 @@
 -->
 
 <!-- What is BoxModel in Css?
-     The webpage is contain BoxModel it means inside the 
+     The webpage is contain BoxModel it Structured in the 
      Rectangular BoX
      
      - margin
@@ -322,4 +323,854 @@
    * The two values are 
       -> content-box(default) 
       -> border-box (we changing the values);
+
+      -> box-sizing: content-box
+      ┌─────────────────────┐
+      │     Content          │
+      │                      │
+      └─────────────────────┘
+
+      -> box-sizing: border-box
+        ┌─────────────────────┐
+        │   Content + Padding│
+        │   + Border           │
+        └─────────────────────┘
+
 -->
+
+<!-- What is flexbox?
+  Flexbox is a one-dimensional layout system 
+  designed to distribute space along a single 
+  axis—either horizontally (row) or vertically (column). 
+  It's ideal for arranging items within a container, such as 
+  navigation menus, lists, and card layouts. Flexbox allows you to 
+  create dynamic and adaptive layouts with ease.  
+
+  -> flex Property
+     display: flex, flex-direction, 
+     justify-content, 
+     align-items, 
+     align-self
+
+     Eg:
+      .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .nav-item {
+        flex: 1;
+        padding: 10px;
+      }
+
+ -->
+
+<!-- What is Gid? 
+     CSS Grid is a two-dimensional layout system that allows you to 
+     create complex layouts with rows and columns. 
+     It's suitable for larger-scale layouts, such as entire page structures,
+     grids of images, and magazine-style designs. 
+     CSS Grid provides precise control over both row and 
+     column placement
+
+    -> Grid Property
+       display: grid, 
+       grid-template-rows, 
+       grid-template-columns, 
+       grid-gap, 
+       grid-area
+
+       Eg:
+        .grid-container {
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-gap: 10px;
+        }
+
+        .grid-item {
+          border: 1px solid #ccc;
+          padding: 10px;
+        }
+
+-->
+
+<!-- What is Position?
+     The CSS position property is used to control the positioning of an element 
+     within its containing element or the viewport. 
+     It has several possible values, each affecting 
+     the way an element is displayed and positioned on a 
+     webpage. Here are four key points to understand 
+     about the position property
+
+    -> Position Property
+       Static (default)
+       Relative
+       Absolute
+       Fixed
+
+      Eg:
+      .relative-box {
+           position: relative;
+           top: 20px;
+           left: 10px;
+      }
+
+      .absolute-box {
+        position: absolute;
+        top: 50px;
+        right: 0;
+      }
+      
+      .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+      }
+-->
+<!-- X -->
+
+<!-- JavaScript Interview Questions -->
+
+<!-- What is JavaScript?
+           Javascript is high-level Interpreter programming language
+      that primary use for web development.It allows the developer 
+      to add interactivity and dynamic behaviour(some actions -> clicking btn)
+      to the website
+
+      -> option
+     * Javascript is execute by the web browser make client
+      side scripting language.
+     * It enables the client side script to interact with 
+       user,control the web browser communicate asynchronously.
+-->
+<!-- What is data types in JavaScript?
+     There are two types
+    * Primitive Data types
+    * Non-Primitive Data types
+
+  -> Primitive types 
+     The predefined data types provided by JavaScript language
+     * String
+     * Number
+     * Boolean
+     * Undefined
+     * Null
+
+  -> Non -Primitive types    
+     The data types that are derived from primitive data types of the 
+     JavaScript language are known as non-primitive data types
+     * Object
+     * Array
+-->
+<!-- Null and Undefined 
+    * Undefined is used when a variable is declared but not assigned any value yet.
+    * Null is used to explicitly indicate the absence of a value, without implying that a value will be assigned later
+ -->
+
+<!-- How many types of function?
+  
+  -> Named Functions
+     function Add() {
+       return 4 + 1;
+     }
+    console.log(Add());
+
+  -> Anonmoyus function
+      The function not have a name
+     let sub = function () {
+       return 4 - 1;
+     };
+    console.log(sub())
+
+  -> IIFE -> Immediate Invoked Function Expression
+    let mult = (function mult () {
+      return 4 * 8
+    }())
+    mult
+
+  -> Arrow Function
+      let div = () => {
+        return 4 / 2;
+      }
+      console.log(div())
+
+-->
+
+<!-- What is Built-in methods Javascript?
+     
+    -> Array
+    * push(): Adds one or more elements to the end of an array.
+    * pop(): Removes the last element from an array and returns it.
+    * shift(): Removes the first element from an array and shifts the remaining elements.
+    * unshift(): Adds one or more elements to the beginning of an array.
+    * concat(): Combines two or more arrays.
+    * slice(): Extracts a portion of an array into a new array.
+    * splice(): Adds or removes elements from an array at a specified index.
+    * forEach(): Executes a provided function once for each array element.
+    * map(): Creates a new array with the results of calling a provided function on every element.
+    * filter(): Creates a new array with all elements that pass a test.
+    * reduce(): Applies a function to an accumulator and each element to reduce the array to a single value.
+
+  -> String
+    * length: Returns the length of the string.
+    * charAt(): Returns the character at a specified index.
+    * indexOf(): Returns the index of the first occurrence of a specified value.
+    * slice(): Extracts a portion of a string into a new string.
+    * substring(): Returns a portion of the string between two specified index.
+    * toUpperCase(): Converts the string to uppercase.
+    * toLowerCase(): Converts the string to lowercase.
+    * concat(): Combines two or more strings.
+    * trim(): Removes whitespace from both ends of a string.
+    * replace(): Replaces occurrences of a specified value with another value.
+    * split(): Splits a string into an array of substrings based on a specified separator.
+
+-->
+
+<!-- How many types of loops in js?
+  
+    -> For loop
+
+      let arr = [1,2,3,4,5];
+      for(let i = 0; i < arr.length; i++){
+        console.log(arr[i])
+      }
+    
+    ->For of is used of array
+      * For...of loop is used to iterate over iterable objects, 
+        like arrays, providing direct access to their values.
+
+      let veg = ["apple","orange","grapes","pineapple"]
+      for(let value of veg){
+        console.log(value)
+      }
+    
+    -> For in used of object        
+       * For...in loop is used to iterate over object properties,
+         providing access to property names.
+
+      let bio = {name :"hulk", place : "usa"}
+      for(let data in bio){
+        console.log(bio[data])
+      }
+    
+    ->  while loop 
+
+      * While loop repeatedly executes a block of code while a specified condition is true.
+      let i = 0;
+      while(i < 5){
+        console.log(i++)
+      }
+    
+      * Do...while loop executes a block of code at least once,
+       then repeatedly executes it while a specified condition is true.
+    
+      let index = 1;
+      do{
+        console.log(index)
+        index++
+      }while(index > 5)
+
+-->
+
+<!-- If, else condition
+    To checking condition of the code whether it return true or false
+    5 == "5" // true
+
+  -> If else condition
+     if(5 === "5"){
+       console.log('yes')
+     }else{
+       console.log('no')
+     }
+  
+  -> Nested If condition
+     if(5 == '5'){
+       if(5 === '5'){
+         console.log('yes')
+       }else{
+         console.log('no')
+       }
+     }
+  
+  -> Nested for else 
+     if(5 == "1"){
+       console.log('yes');
+     }else{
+       if(5 == 2){
+         console.log('yes')
+       }else{
+         console.log('no')
+       }
+     }
+  
+  
+  ->If,else if,...,else
+  
+    if(1==="1"){
+      console.log("true")
+    }else if(1=="0"){
+      console.log("false")
+    }else if(1==="4"){
+      console.log("Not")
+    }else if(5==5){
+      console.log("Equal")
+    }else{
+      console.log("?")
+    }
+
+  -> Switch Case  
+
+    let a = 6;
+    switch(a) {
+      case 1 : console.log('1')
+      break;
+      case 2 : console.log('2')
+      break;
+      case 3 : console.log('3')
+      break;
+      case 4 : console.log('4')
+      break;
+      case 5 : console.log('5')
+      break;
+      case 10 : console.log('6')
+      break;
+      default : console.log('No numbers present')
+    }
+ -->
+
+<!-- DOM(Document Object Model) & XMLHttpRequest?
+ 
+      * DOM stands for Document Object Model it programming interface  provided by web browsers,
+        It represents the structured content of an HTML or XML document as a tree of objects. 
+        With the DOM, developers can dynamically interact with and manipulate the content, 
+        structure, and style of web pages.
+
+        let div = document.createElement('div');
+        let p  = document.createElement('p');
+        p.setAttribute("id", "p");
+
+        div.appendChild(p)  (or) div.append(p)
+
+        document.body.innerHtml = div
+      
+      * XMLHttpRequest
+
+        let url = 'https://jsonplaceholder.typicode.com/users'
+
+        let http = new XMLHttpRequest();
+        
+        -> getting api from the url
+        
+        http.open('get',url);
+
+        -> setting the response for json
+        
+        http.responseType = 'json';
+        http.send();
+
+        -> http loading
+          
+          http.onload = () => {
+          let Data = http.response;
+           
+          
+          Data.map((items) => {
+          let parent_div = document.createElement('div'); 
+          parent_div.setAttribute('class', "parent");
+          let table = document.createElement('table');
+          let tr = document.createElement('tr')
+          let th = document.createElement('th');
+          let tr2 = document.createElement('tr');
+          let td = document.createElement('td');
+            th.textContent = 'id'
+            td.textContent = items.id
+            td.textContent = items.name
+         
+          tr.appendChild(th);
+          tr2.appendChild(td);
+
+          table.append(tr)
+          table.append(tr2)
+
+          table.style.border = '2px solid black'
+          tr.style.border = '2px solid black'
+          th.style.border = '2px solid black'
+          tr2.style.border = '2px solid black'
+          td.style.border = '2px solid black'
+          
+        
+        parent_div.append(table)
+        document.body.append(parent_div);
+           
+      })
+
+        }
+ -->
+
+<!-- What is Promise ?
+
+    * In JavaScript, a promise is an object representing the eventual completion or failure of an asynchronous operation. 
+    * It provides a way to handle the result or error of the operation once it's available
+    -> Status 
+        Informational responses (100 – 199)
+        Successful responses (200 – 299)
+        Redirection messages (300 – 399)
+        Client error responses (400 – 499)
+        Server error responses (500 – 599)
+
+
+    -> Promise Hell
+     function GettingProm (res, rej) {
+       setTimeout(() => {
+         // rej('Error')  
+         res(5)
+       },3000)
+    
+     let some = new Promise(GettingProm)
+     .then((a) => a + 1)
+     .then((b) => b + 1 )
+     .then((b) => b + 1 )
+     .then((b) => b + 1 )
+     .then((b) => b + 1 )
+     .then((b) => console.log(b + 1) )
+     .catch((err) => {
+       console.log(ReferenceError , err);
+     })
+ -->
+
+<!-- What is CallBack in js?
+
+
+    -> callback
+        function booking () {
+         console.log('Bike is booked on may')
+       
+        function bikeParts(){
+         console.log('Bike parts done')
+       
+        function bikeAssemble (){
+         console.log('Bike assembled')
+       
+        function bikeArrived(){
+         setTimeout(() => {
+           alert('Bike Arrived to Showroom')
+           callback()
+         },3000)
+    
+       }
+  
+       function callback () {
+         console.log('Bike ready!!!')
+       
+       booking()
+       bikeParts()
+       bikeAssemble()
+       bikeArrived()
+        
+      CallBack hell
+
+       let a = 10;
+
+       setTimeout(() => {
+         callback();
+         setTimeout(() => {
+           callback();
+           setTimeout(() => {
+             callback();
+             setTimeout(() => {
+               callback();
+               setTimeout(() => {
+                 callback();
+                 setTimeout(() => {
+                   callback();
+                   setTimeout(() => {
+                     callback();
+                     setTimeout(() => {
+                       callback();
+                       setTimeout(() => {
+                         callback(); 
+                         setTimeout(() => {
+                           callback();
+                         }, 10000);
+                       }, 9000);
+                     }, 8000);
+                   }, 7000);
+                 }, 6000);
+               }, 5000);
+             }, 4000);
+           }, 3000);
+         }, 2000);
+       }, 1000)
+       function callback() {
+         console.log(`Execute finished ${a--}`);
+       }
+  -->
+
+<!-- What is Template Literals?
+    we can write the js inside the string
+
+    console.log(`Adding two numbers:  ${5 + 6}`);
+-->
+
+<!-- What Hoisting in javaScript ?
+      
+     Hoisting is a behavior in JavaScript where variable and function declarations are 
+     moved to the top of their containing scope during compilation, allowing them to be 
+     accessed before their actual placement in the code
+
+  -> Var hoisting
+
+     console.log(myVar); // Outputs: undefined
+     var myVar = 10;
+     console.log(myVar); // Outputs: 10
+  
+  -> function hoisting
+
+     foo(); // Outputs: "Hello from foo!"
+     function foo() {
+       console.log("Hello from foo!");
+     }
+
+  -> anonymous function 
+
+     bar(); // Throws an error: bar is not a function
+     var bar = function() {
+     console.log("Hello from bar!");
+   };
+
+
+  -> var
+     Declares a variable, optionally initializing it to a value.(global,block)
+   
+  -> let
+     Declares a block-scoped, local variable, optionally initializing it to a value.
+   
+  -> const
+     Declares a block-scoped, read-only named constant.
+
+-->
+
+<!-- spread and rest
+    
+    * we can easily merge the two array of values in one array using spread operators
+    to calculate the total array
+  
+      let a = [1,3,4,5,5];
+  let b = ["sura","yera","meera"];
+  
+  let total_arr = [...a, ...b]
+  
+  console.log(...total_arr)
+ 
+  * Rest it collect numbers elements in one array
+     collects any number of arguments passed to the function 
+
+  function add (...a); 
+     let sum = 0
+     console.log(a)
+    -> for loop
+      for(let i = 0; i < a.length;i++){
+       sum += a[i]
+      }
+  
+    -> map 
+     a.map((item) => {
+       return sum += item
+     })
+     return sum
+    
+    -> for of array
+     for(let arr of a){
+       console.log(arr)
+       sum += arr
+     }
+     return sum
+  
+  
+  console.log(add(...a))
+-->
+
+<!-- Destructuring in Array and Object
+
+  -> Array
+     let arr = [1,2,3,4,5];
+     let [N, M, ...remain] = [...arr];
+     
+     console.log(N)
+     console.log(M);
+     console.log(...remain);
+  
+  -> Object
+    let obj = {name : "sam" , age : 23, city : "dpi"}  
+    let {name, ...K} = {...obj};
+    
+    console.log(name)
+    console.log(K.age)
+    console.log(K.city)
+ -->
+
+<!--  What is Closure in Js?
+
+      * Closure is function which return a another function by using inner 
+      * function we access the outer function
+
+    function output () {
+      let a = 10;
+      return function inner( ){
+        console.log(a + 4)
+      }
+    }
+    let total= output()
+    total()  // 14
+-->
+
+<!-- What is EventLoop?
+    
+  ->  Event Loop
+  * It check the code is there any variable or function it go to the callStack
+    and execute the function or variable
+  * Is there any setTimeout,setInterval,fetch apis it move to web api 
+    it move to queue
+  * In we have two types of stack:
+    * micro -> promise,fetch apis
+    * macro -> setTimeout,setInterval
+  * It moved to callStack the code will be execute
+  
+  ** JavaScript work like asynchronous 
+-->
+
+<!-- Async and await?
+
+    -> async 
+       * It is used to declare a function as asynchronous, allowing it to use the await keyword inside. 
+       * An async function always returns a promise.
+
+    -> await  
+       * It is used within an async function to pause the execution of the function until a promise is resolved. 
+       * This makes asynchronous code look more like synchronous code, improving readability and maintainability.
+
+ -->
+
+<!-- how many of Api request?
+      -> HTTP REQUEST
+
+        const httprequest = new XMLHttpRequest();
+        httprequest.open('get', "https://jsonplaceholder.typicode.com/users");
+        httprequest.responseType = "json";
+        httprequest.send();
+        
+        *we onloading the apis
+          httprequest.onload = async () => {
+           const request = await httprequest.response;
+           console.log(request)
+        
+           for(let i = 0; i < request.length; i++){
+            console.log(request[i].address.geo.lat)
+           }
+        }
+        console.log(httprequest);
+
+      -> Using Promise calling api in two methods
+
+
+       let url = "https://jsonplaceholder.typicode.com/users";
+       const callingApi = new Promise((res, rej) => {
+         res('ok');
+         fetch(url).then((data) => data.json())
+         .then((data) => data.map((items) => console.log(items.name)))
+         .catch((err) => console.log(ReferenceError, err));
+       }).finally(() => console.log("Api is calling Wait..."))
+      
+      
+      
+       let url = "https://jsonplaceholder.typicode.com/users";
+
+        const ApiCalling = new Promise((res, rej) => {
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              console.log(new Error("Some network Error!!"));
+            }
+            return response.json();
+          })
+          .then((data) => {
+            const totalData = data.map((items) => items);
+            res(totalData);
+          })
+          .catch((err) => {
+            rej(err);
+          });
+      }).finally(() => console.log("Api calling is finished!!"));
+
+      ApiCalling.then((data) => data.map((items) => console.log(items.name)));
+-->
+
+<!-- What is Bubbling and Capturing or Event Propagation?
+
+    -> Bubbling from inside start tag to outer most tag
+
+     <div style="border: 1px solid black">
+      div
+      <form style="border: 1px solid black">
+        form
+        <p style="border: 1px solid black">Hello World</p>
+      </form>
+    </div>
+
+    <script>
+      for(let tags of document.querySelectorAll("*")){
+        tags.addEventListener("click", (e) => alert(`It is Bubbling ${tags.tagName}`), true);
+      }
+    </script>
+
+  -> Capturing from outer most tag to inner most tag
+  
+     <div style="border: 1px solid black">
+      div
+      <form style="border: 1px solid black">
+        form
+        <p style="border: 1px solid black">Hello World</p>
+      </form>
+    </div>
+
+     <script>
+      for(let tags of document.querySelectorAll("*")){
+        tags.addEventListener("click", (e) => alert(`It is Capturing ${tags.tagName}`));
+      }
+    </script>
+
+-->
+
+<!-- What is Object in javascript?
+
+  
+let bio = {
+   name : "surya",
+   age : 34
+}
+
+console.log(Object.values(bio))
+console.log(Object.keys(bio));
+console.log(Object.entries(bio));
+
+-->
+
+<!-- Find the unique values and duplicate values?
+
+-> using set
+    
+    const a = [1,2,1,2,3];
+    const result = [];
+     console.log(Array.from(new Set(a)))
+
+-> using filter
+
+    const result = a.filter((items, index) => {
+   return a.indexOf(items) !== index
+   console.log(typeof items.toString().split('').indexOf(items) != index)
+  });
+
+
+-> using Map
+
+   let map = new Map();
+   for(let i = 0; i < a.length; i++){
+     let values = a[i];
+     if(map.has(values)){
+        map.set(values, map.get(values) + 1);
+     }else{
+       map.set(values, 1);
+       console.log(map.set(values ,1))
+     }
+   }
+   
+   map.forEach((number, values) => {
+     console.log(number)
+     console.log(values)
+     if(number === 1){
+       result.push(values)
+     }
+   })
+   
+ > 1 -> It gives only duplicate values
+ > 0 -> It gives both duplicate and unique values
+ === 1  -> It gives Only unique values
+console.log(result)
+-->
+
+<!-- What is Prototype?
+
+    let tiger = { jump: true, non_veg: true };
+    let animals = { forest: true, non_veg: true };
+    
+    tiger.__proto__ = animals;
+    console.log(tiger.jump);     // true
+    console.log(tiger.forest);   // true (inherited from the prototype)
+    console.log(tiger.non_veg);  // true (overrides the inherited property)
+    console.log(animals.jump);   // undefined (not a property of animals)
+-->
+
+<!-- What's the purpose of the this keyword in JavaScript?
+
+ -> bind(this)
+
+  let obj = {
+  name: "surya",
+  age: 23,
+  city: "salem",
+  get() {
+    const set = (function () {
+      return this.name + " " + this.age + " " + this.city;
+    }).bind(this);
+    return set();
+  },
+};
+
+console.log(obj.get()); // Output: surya 23 salem
+-->
+
+<!-- What is call and apply in js;
+
+-> Apply
+
+  The apply method allows you to call a function with a given 
+  this value and an array of arguments.
+
+  function greet(message) {
+    console.log(`${message}, ${this.name}`);
+  }
+  
+  const person = { name: "Alice" };
+  
+  greet.apply(person, ["Hello"]); // Output: Hello, Alice
+
+
+
+-> call
+ The call method is similar to apply, but you pass individual 
+ arguments instead of an array.
+
+
+  console.log(`I'm ${this.name}, ${age} years old, living in ${city}`);
+ }
+ function introduce(age, city) {
+ const person = { name: "Bob" };
+ 
+ introduce.call(person, 30, "New York"); // Output: I'm Bob, 30 years old, living in New York
+-->
+
+<!-- How to change Array to Object?
+
+ -> we can do three types of array to object
+    let arr = [1,2,3,4,5];
+    let total = [[1,2],[5,6],[2,3]]
+    
+    console.log(Object.assign({}, arr))
+    console.log({...arr})
+    console.log(Object.fromEntries(total))
+
+ -->
