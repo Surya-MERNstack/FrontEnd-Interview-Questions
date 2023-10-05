@@ -4,16 +4,23 @@
   * html stands for hyper text markup language for creating
    structure and content of the webpage
 
-  * It use set of tag and define the elements and component of webpage
+  * It use set of tag and define the elements and component of the webpage
    
   * And it's enclosed with angle bracket
 -->
 
 <!-- What is Doctype? 
   * The HTML document type declaration is also known doctype
-    is the first line of code required for html and xml.
-  * The doctype tell the browser which version of html used on the web page 
+    is the initial line of code  required for every html and xml file.
+  * The doctype tell the browser and which version of html used on the web page 
+    it is easily  interpret and render the content accurately.
  -->
+ <!-- What is meta tag?
+    A meta tag is an HTML element that provides metadata about a web page, 
+    such as character encoding, page description, and keywords,
+    to help search engines and browsers understand and display the page correctly.
+
+-->
 
 <!-- what is keys in html? 
   * To specify the html elements by using the selectors
@@ -42,8 +49,8 @@
  -->
 
 <!-- what is form in html and uses?
-  Form is used for validation from the users 
-  eg. email login
+     Form is used for validation from the users 
+     eg. email login
 
   Form tags -> three types of tags
   * label
@@ -248,12 +255,12 @@
       </div>
       <p>para6</p>
 
-     -> General Sibling Selectors (+)
+     -> General Sibling Selectors (~)
          It works only  outside the div next para
 
        Eg:
        <style>
-       div + p{
+       div ~ p{
            background-color: red;
         }
       </style>
@@ -501,12 +508,23 @@
      JavaScript language are known as non-primitive data types
      * Object
      * Array
+     * Function
+     * Date
+     * RegExp
 -->
-<!-- Null and Undefined 
+<!-- Difference between Null and Undefined 
     * Undefined is used when a variable is declared but not assigned any value yet.
     * Null is used to explicitly indicate the absence of a value, without implying that a value will be assigned later
  -->
 
+<!-- What is Local Storage and Session Storage?
+  -> Local Storage
+     Local Storage data persists across sessions and remains accessible even when the website is offline.
+  
+  -> Session Storage
+     Session Storage data is tied to a specific browsing session and is lost when the session ends (tab or window is closed).
+     It's not accessible when the website is offline
+-->
 <!-- How many types of function?
   
   -> Named Functions
@@ -681,8 +699,8 @@
 <!-- DOM(Document Object Model) & XMLHttpRequest?
  
       * DOM stands for Document Object Model it programming interface  provided by web browsers,
-        It represents the structured content of an HTML or XML document as a tree of objects. 
-        With the DOM, developers can dynamically interact with and manipulate the content, 
+        It represents the structured content of an HTML or XML document as a tree-like object structure. 
+        With the DOM, developers can dynamically interact  and manipulate the content, 
         structure, and style of web pages.
 
         let div = document.createElement('div');
@@ -892,19 +910,20 @@
 
 <!-- spread and rest
     
-    * we can easily merge the two array of values in one array using spread operators
-    to calculate the total array
+    * The spread operators denote three(...) they are used to segregate the array 
+       into individual elements
   
       let a = [1,3,4,5,5];
-  let b = ["sura","yera","meera"];
+  let b = ["sura","era","meera"];
   
   let total_arr = [...a, ...b]
   
   console.log(...total_arr)
  
-  * Rest it collect numbers elements in one array
-     collects any number of arguments passed to the function 
-
+  * The Rest operators denote three(...)dots it allows to capture multiple function 
+    argument into an array
+  *  They used treat individual arguments passed to the function as combined array
+    in the function parameter
   function add (...a); 
      let sum = 0
      console.log(a)
@@ -952,7 +971,9 @@
 <!--  What is Closure in Js?
 
       * Closure is function which return a another function by using inner 
-      * function we access the outer function
+      * function we access the outer function. Even through outer function
+        execute long before the inner function stick around and remembers
+        the values of outer function
 
     function output () {
       let a = 10;
@@ -1191,9 +1212,10 @@ console.log(obj.get()); // Output: surya 23 salem
  arguments instead of an array.
 
 
-  console.log(`I'm ${this.name}, ${age} years old, living in ${city}`);
- }
+
  function introduce(age, city) {
+    console.log(`I'm ${this.name}, ${age} years old, living in ${city}`);
+ }
  const person = { name: "Bob" };
  
  introduce.call(person, 30, "New York"); // Output: I'm Bob, 30 years old, living in New York
@@ -1210,3 +1232,37 @@ console.log(obj.get()); // Output: surya 23 salem
     console.log(Object.fromEntries(total))
 
  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //     const xmlRequest = new XMLHttpRequest();
+      // xmlRequest.open("get","https://jsonplaceholder.typicode.com/users");
+      // xmlRequest.responseType="json";
+      // xmlRequest.send();
+
+      // xmlRequest.onload = async () => {
+      //   const liked = await (xmlRequest.response)
+      //   liked.map((t)=>{
+      //     console.log(t)
+      //   });
+      // }
+      // function towerOfHanoi(n, fromRod, toRod, usingRod) {
+      //   if (n === 1) {
+      //     console.log(`Move dist 1 from ${fromRod} to ${toRod}`);
+      //     return;
+      //   }
+      //   towerOfHanoi(n - 1, fromRod, usingRod, toRod);
+      //   console.log(`Move disk ${n} from ${fromRod} to ${toRod}`);
+      //   towerOfHanoi(n - 1, usingRod, fromRod, toRod);
+      // }
+
+      // towerOfHanoi(3, "A", "C", "B");
+    </script>
+  </body>
+</html>
