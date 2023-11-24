@@ -1263,6 +1263,137 @@ console.log(obj.get()); // Output: surya 23 salem
       // }
 
       // towerOfHanoi(3, "A", "C", "B");
+      // let inputArray = [1, 2, 2, 3, 4, 4, 5,-1,-1];
+
+          // function Recursion (n) {
+          //       if(n < 1) return console.log('Finished') ;
+
+          //       setTimeout(( ) => {
+          //         console.log(n)
+          //         Recursion(n - 1)
+          //       },1000)
+               
+          // }
+
+          // Recursion(5)
+
+          let n = 5;
+
+// for(let i = 0; i < n; i++){
+//   let start = "";
+//   if(1 <= n) {
+//     for(let j = i; j < n; j++){ 
+//       start += "*"
+//     }
+//     console.log(start) 
+//   }
+// }
+
+// const num = [0,1,0,2,3,4,5];
+
+// function rotate (num) {
+//    let left = 0;
+//    let right = 0;
+
+//     while(right < num.length){
+//       if(num[right] != 0){
+//          [num[left], num[right]] = [num[right], num[left]]
+//          left ++
+//       }
+//       right ++
+//     }
+//     return num
+// }
+
+// console.log(rotate(num))
+
+// let arr = [1,2,3,4,5,-1,6];
+
+
+// function findSecondLargest (arr) {
+//   console.log(arr);
+//   if(arr.length < 2) return -1;
+
+//    let first = Infinity;
+//    let second  = Infinity;
+
+//    for(let i = 0; i < arr.length; i++){
+//      if(arr[i] < first){
+//        second = first;
+//        first = arr[i]
+//      }else if(arr[i] < second && arr[i] !== first) {
+//         second = arr[i]
+//      }
+//    }
+//    return second !== Infinity ? second : -1;
+// }
+
+// console.log(findSecondLargest(arr));
+
+
+// let arr = [1,2,3,4,5,7,11,4];
+// let n = 2;
+
+// function Prime (arr) {
+//   if(arr < 2) return false;
+
+//   let prime = [];
+
+//   for(let i = 2; i <= Math.sqrt(arr); i++){
+//     if(arr % i === 0){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// let output = [];
+
+// for(let i = 0; i < arr.length; i++){
+//   if(Prime(arr[i])){ 
+//     output.push(arr[i]);
+//  }
+// }
+
+// console.log(output.includes(n));
+
+
+
+// function isIsomorphic (s, t) {
+//    if(s.length !== t.length) return false;
+
+//    let sToTMap = new Map();
+//    let tToSMap = new Map();
+
+//    for(let i = 0; i < s.length; i++){
+//       let S1 = s[i];
+//       let T1 = t[i];
+
+//       console.log(S1, T1);
+//       if(!sToTMap.has(S1)){
+//         sToTMap.set(S1, T1);
+//       }else{
+//         if(sToTMap.get(S1) !== T1){
+//           return false;
+//         }
+//       }
+
+//       if(!tToSMap.has(T1)){
+//         tToSMap.set(T1, S1);
+//       }else{
+//         if(tToSMap.get(T1) !== S1){
+//            return false;
+//         }
+//       }
+//    }
+//    return true;
+// }
+
+// let s = "aab";
+// let t = "xxy";
+
+// console.log(isIsomorphic(s, t));
+
     </script>
   </body>
 </html>
