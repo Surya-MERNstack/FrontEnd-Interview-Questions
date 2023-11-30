@@ -4627,38 +4627,614 @@ console.log("Maximum contiguous sum is", maxSubArraySum(a));
 
 // console.log(isIsomorphic(s, t));
 
+// function isomorphic (s, t) {
+//   if(s.length !== t.length) return "no";
 
-function isomorphic (s, t) {
-  if(s.length !== t.length) return "no";
-  
-  let sToMap = new Map();
-  let tToMap = new Map();
-  
-  for(let i = 0; i < s.length; i++){
-     let S1 = s[i];
-     let T1 = t[i];
-     
-     if(!sToMap.has(S1)){
-         sToMap.set(S1, T1);
-     }else{
-         if(sToMap.get(S1) !== T1){
-             return "no";
-         }
-     }
-     
-     if(!tToMap.has(T1)){
-         tToMap.set(T1, S1);
-     }else {
-         if(tToMap.get(T1) !== S1){
-             return "no";
-         }
-     }
-  }
-  
-  return "yes";
-}
+//   let sToMap = new Map();
+//   let tToMap = new Map();
 
-let userInput = ["aab xoy"]
-let [s, t] = userInput[0].split(' ');
-console.log(s,t);
-console.log(isomorphic(s, t));
+//   for(let i = 0; i < s.length; i++){
+//      let S1 = s[i];
+//      let T1 = t[i];
+
+//      if(!sToMap.has(S1)){
+//          sToMap.set(S1, T1);
+//      }else{
+//          if(sToMap.get(S1) !== T1){
+//              return "no";
+//          }
+//      }
+
+//      if(!tToMap.has(T1)){
+//          tToMap.set(T1, S1);
+//      }else {
+//          if(tToMap.get(T1) !== S1){
+//              return "no";
+//          }
+//      }
+//   }
+
+//   return "yes";
+// }
+
+// let userInput = ["aab xoy"]
+// let [s, t] = userInput[0].split(' ');
+// console.log(s,t);
+// console.log(isomorphic(s, t));
+
+// function isIs2jo,khgv bbv
+
+// function isIsomorphic(s, t) {
+//   if (s.length !== t.length) return false;
+
+//   let sToMap = new Map();
+//   let tToMap = new Map();
+
+//   for (let i = 0; i < s.length; i++) {
+//     let s1 = s[i];
+//     let t1 = t[i];
+
+//     if (!sToMap.has(s1)) {
+//       sToMap.set(s1, t1);
+//     } else {
+//       if (sToMap.get(s1) !== t1) {
+//         return false;
+//       }
+//     }
+
+//     if (!tToMap.has(t1)) {
+//       tToMap.set(t1, s1);
+//     } else {
+//       if (tToMap.get(t1) !== s1) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// }
+
+// let s = "sdt";
+// let t = "agb";
+// console.log(isIsomorphic(s, t));
+
+// let word = "The word is f not coming ddddddddddddddd".split(' ');
+// let LongestWords = " ".repeat(100);
+
+// for(let i = 0; i < word.length; i++){
+//   let LongWord = word[i].length;
+//   if(LongWord < LongestWords.length){
+//     LongestWords = word[i];
+//   }
+// }
+
+// console.log(LongestWords)
+
+// let [m, n] = [3,3];
+// let arr = [[1,2,3], [4,5,6],[7,8,9]];
+
+// function TwoMatrix (arr, m, n) {
+//    let top = 0;
+//    let left = 0;
+//    let right = m - 1;
+//    let bottom = n - 1;
+//    let result = [];
+
+//    while(left <= right && top <= bottom){
+//     for(let  i = left; i <= right; i++){
+//         result.push(arr[top][i])
+//     }
+//     top ++
+
+//     for(let i = top; i <= bottom; i++){
+//       result.push(arr[i][right]);
+//     }
+//     right --;
+
+//     for(let  i = right; i >= left; i--){
+//       result.push(arr[bottom][i]);
+//     }
+//     bottom --;
+
+//     for(let i = bottom; i >= top; i--){
+//       result.push(arr[i][left]);
+//     }
+//     left ++;
+//    }
+//    return result;
+// }
+
+// console.log(TwoMatrix(arr,m, n))
+
+// let n = 3;
+
+// function SpiralMatrix (n) {
+//    let arr = new Array(n).fill(0).map(() => new Array(n).fill(0))
+//    let top = 0;
+//    let left = 0;
+//    let right = n - 1;
+//    let bottom = n - 1;
+//    let count = 1;
+
+//    while(left <= right && top <= bottom) {
+//      for(let i = left; i <= right; i++){
+//         arr[top][i] = count++;
+//      }
+//      top++
+
+//      for(let i = top; i <= bottom; i++){
+//        arr[i][right] = count++;
+//      }
+//      right --;
+
+//      for(let i = right; i >= left; i--){
+//        arr[bottom][i] = count++;
+//      }
+//      bottom --;
+
+//      for(let i = bottom; i >= top; i--){
+//        arr[i][left] = count++;
+//      }
+//      left ++;
+//    }
+//    return arr;
+//   }
+
+// console.log(SpiralMatrix(n))
+
+// var spiralMatrixIII = function(rows, cols, rstart, cstart) {
+//   let result = [];
+//   let step = 1;
+
+//   while(result.length < rows * cols){
+
+//       //left to right
+//       for(let i = 0; i < step; i++){
+//          validate(rstart, cstart ++);
+//       }
+
+//       //top to bottom
+//       for(let i = 0; i < step; i++){
+//           validate(rstart ++, cstart);
+//       }
+//       step ++;
+
+//       //right to left
+//       for(let i = 0; i < step; i++){
+//           validate(rstart, cstart --);
+//       }
+
+//       //bottom to top
+//       for(let i = 0; i < step; i++){
+//           validate(rstart --, cstart);
+//       }
+//       step ++;
+//   }
+
+//    return result;
+
+//   function validate(row, column) {
+//       if(row < 0 || column < 0 || row >= rows || column >= cols){
+//           return;
+//       }
+//       result.push([row, column]);
+//   }
+
+// };
+
+// function spiralMatrixIII (rows, cols, rstart, cstart) {
+//    let result = [];
+//    let step = 1;
+
+//    while (result.length < rows * cols) {
+
+//     //left to right
+
+//      for(let i = 0; i < step; i++){
+//           validate(rStart, cStart++);
+//      }
+
+//      // top to  bottom
+
+//      for(let i = 0; i < step; i++){
+//        validate(rStart ++, cstart);
+//      }
+//      step++
+
+//      //right to left
+
+//      for(let i = 0; i < step; i++){
+//       validate(rStart, cstart --);
+//      }
+
+//      // bottom to top
+
+//      for(let i = 0; i < step; i++){
+//       validate(rstart -- , cstart);
+//      }
+
+//      step++
+//    }
+//    return result;
+
+//    function validate (row, column) {
+//        if(row < 0 || column < 0 || row >= rows || column >= cols){
+//         return;
+//        }
+
+//        result.push([row, column]);
+//    }
+// }
+
+// let rows = 1, cols = 4, rStart = 0, cStart = 0
+
+// console.log(spiralMatrixIII(rows,cols,rStart,cStart))
+
+// function spiralMatrixIII(rows, cols, rStart, cStart) {
+//   let result = [];
+//   let step = 1;
+
+//   while (result.length < rows * cols) {
+//     // left to right
+//     for (let i = 0; i < step; i++) {
+//       validate(rStart, cStart++);
+//     }
+
+//     // top to bottom
+//     for (let i = 0; i < step; i++) {
+//       validate(rStart++, cStart);
+//     }
+//     step++;
+
+//     // right to left
+//     for (let i = 0; i < step; i++) {
+//       validate(rStart, cStart--);
+//     }
+
+//     // bottom to top
+//     for (let i = 0; i < step; i++) {
+//       validate(rStart--, cStart);
+//     }
+//     step++;
+//   }
+//   return result;
+
+//   function validate(row, column) {
+//     if (row < 0 || column < 0 || row >= rows || column >= cols) {
+//       return;
+//     }
+//     result.push([row, column]);
+//   }
+// }
+
+// function spiralMatrixIII(rows, cols, rstart, cstart) {
+//   let result = [];
+//   let step = 1;
+
+//   while (result.length < rows * cols) {
+//     // left to right
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart, cstart++);
+//     }
+
+//     // top to bottom
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart++, cstart);
+//     }
+//     step++;
+
+//     //  right to  left
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart, cstart--);
+//     }
+
+//     //  bottom to top
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart--, cstart);
+//     }
+//     step++;
+//   }
+//   return result;
+
+//   function validate(row, column) {
+//     if (row < 0 || column < 0 || row >= rows || column >= cols) {
+//       return;
+//     }
+//     result.push([row, column]);
+//   }
+// }
+
+// let rows = 5,
+//   cols = 6,
+//   rStart = 1,
+//   cStart = 4;
+// console.log(spiralMatrixIII(rows, cols, rStart, cStart));
+
+// let arr = [1,2,3,4,5,6,22,0];
+// let first = Infinity;
+// let second = Infinity;
+
+// for(let i = 0; i < arr.length; i++){
+//    if(arr[i] < first){
+//     second = first
+//     first = arr[i];
+//    } else if (arr[i] < second && arr[i] !== first) {
+//      second = arr[i]
+//    }
+// }
+
+// console.log(second);
+
+// let arr = 5;
+// let fib = [0,1];
+
+// for(let i = 2; i < arr; i++){
+//   fib[i] = fib[i - 1] + fib[i - 2];
+// }
+
+// console.log(fib);
+
+// let a = 3;
+// let b = 3;
+// let res = 0;
+
+// for(let i = 0; i < a; i++){
+//   res += b;
+// }
+
+// console.log(res);
+
+// let n = 5;
+
+// for(let i = n; i > 0; i--){
+//   let str = " ";
+//   for(let j = 0; j < i; j++){
+//     str += "* "
+//   }
+//   console.log(str);
+// }
+
+// function maxSubarraySum(arr) {
+//   if (arr.length === 0) return 0;
+
+//   let maxSum = arr[0];
+//   let currentSum = arr[0];
+
+//   for (let i = 1; i < arr.length; i++) {
+//     currentSum = Math.max(arr[i], currentSum + arr[i]);
+//     maxSum = Math.max(maxSum, currentSum);
+//   }
+
+//   return maxSum;
+// }
+
+// let sequence = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// console.log(maxSubarraySum(sequence));
+
+// function MaxSq (arr) {
+//   if(arr.length === 0) return "-1";
+
+//   let currSum = arr[0];
+//   let maxSum = arr[0];
+
+//   for(let i = 0; i < arr.length; i++){
+//     currSum = Math.max(arr[i], currSum + arr[i]);
+//     maxSum = Math.max(currSum, maxSum);
+//   }
+//   return maxSum;
+// }
+
+// console.log(MaxSq(sequence))
+// let a = 4;
+// let b = 1
+
+// let sum = a - b;
+
+// if(Math.abs(sum) % 2 === 0) console.log(true);
+// else console.log(false)
+
+// let arr = [1,2,3,4,5];
+
+// let bracket = "[[[[[]]]]]".split('');
+
+// function CheckingBracket (bracket) {
+
+//   let stack = [];
+
+//   let TotalBracket = {
+//     "(" : ")",
+//     "{" : "}",
+//     "[" : "]"
+//   }
+
+//   for(let char of bracket){
+//     if(TotalBracket[char]) stack.push(char);
+//     else {
+//       let lastOpenBracket = stack.pop();
+//       if(TotalBracket[lastOpenBracket] !== char) return false;
+//     }
+//   }
+//   return stack.length === 0
+// }
+
+// let bracket = "[[[[[({})]]]]]".split('');
+// console.log(CheckingBracket(bracket))
+
+// function isBracket (bracket) {
+//    let result = [];
+//    let stack = {
+//      "(" : ")",
+//      "{" : "}",
+//      "[" : "]"
+//    }
+
+//    for(let char of bracket){
+//      if(stack[char]) result.push(char);
+//      else {
+//         let lastOpenBracket = result.pop()
+//         if(stack[lastOpenBracket] !== char) return false;
+//      }
+//    }
+//    return result.length === 0;
+// }
+// console.log(isBracket(bracket));
+
+// function BinarySearch(arr, target) {
+
+//   let leftIndex = 0;
+//   let RightIndex = arr.length -1;
+
+//   while(leftIndex <= RightIndex){
+//     let middleIndex = Math.floor((leftIndex + RightIndex) / 2);
+
+//     if(target === arr[middleIndex]){
+//      return middleIndex
+//     }
+
+//     if(target < arr[middleIndex]){
+//      RightIndex = middleIndex - 1
+//     }else{
+//      leftIndex = middleIndex + 1
+//     }
+//   }
+//   return -1
+// }
+
+// console.log(BinarySearch([-1,2,4,5,6], 5));
+
+// let target = 8;
+// let arr = [1,2,3,4,5];
+// function Binary (target, arr) {
+
+// let left = 0;
+// let right = arr.length -1
+
+// while(left <= right){
+//    let mid = Math.floor(left + right) / 2;
+
+//    if(arr[mid] === target) {
+//     return mid;
+//    }
+//    if(arr[mid] < target){
+//     right = mid - 1;
+//    }else if(arr[mid] > target){
+//      left = mid + 1
+//    }
+
+//    return -1
+// }
+// }
+
+// console.log(Binary(target, arr))
+
+// function BinarySearch(arr, target) {
+
+// let leftIndex = 0;
+// let RightIndex = arr.length -1;
+
+// while(leftIndex <= RightIndex){
+//   let middleIndex = Math.floor((leftIndex + RightIndex) / 2);
+
+//   if(target === arr[middleIndex]){
+//    return middleIndex
+//   }
+
+//   if(target < arr[middleIndex]){
+//    RightIndex = middleIndex - 1
+//   }else{
+//    leftIndex = middleIndex + 1
+//   }
+// }
+// return -1
+// let left = 0;
+// let right = arr.length -1;
+
+// while (left <= right) {
+//   let mid = Math.floor((left + right) / 2);
+
+//   if(arr[mid] === target){
+//      return mid
+//   }
+
+//   if(arr[mid] > target){
+//     right = mid - 1;
+//   }else if(arr[mid] < target){
+//       left = mid  + 1;
+
+//   }
+// }
+// return -1;
+// }
+
+// console.log(BinarySearch([-1,2,4,5,6], 2));
+
+
+
+// let arr = [1,2,3,4,2,3,4];
+
+// function FindingNonRepeating (arr) {
+     
+//   let map = new Map();
+//   let res = 0;
+
+//   for(let i = 0; i < arr.length; i++){
+//     let sum = arr[i];
+//     if(map.has(sum)){
+//       map.set(sum, map.get(sum)  + 1);
+//     }else{
+//       map.set(sum,1);
+//     }
+//   }
+
+//   map.forEach((num, values) => {
+//     console.log(num)
+//     if(num === 1) {
+//       res = values;
+//     }
+//   })
+//   return res
+// }
+
+// console.log(FindingNonRepeating(arr))
+
+// let arr = [1,2,3,4,5,111,111];
+
+
+// let i = 2;
+// let sum = 0;
+// let total = arr.reduce((a, b) => a + b);
+
+
+// while(total.toString().split('').length > i){ 
+//   sum = total.toString().split('').map(Number).reduce((a, b) => a + b);
+//   i++
+// }
+
+// console.log(sum)
+
+
+
+
+// let output = sum.toString().split('').map(Number).reduce((a, b) => a + b)
+
+// console.log(output);
+
+// function BracketParis (paris) {
+
+//   let result = [];
+//   let stack = {
+//     "{" : "}",
+//     "(" : ")",
+//     "[" : "]",
+//   }
+
+//   for(let char of paris){
+//     if(stack[char]) result.push(char); 
+//     else {let lastOpenBracket = result.pop();
+//     if(stack[lastOpenBracket] !== char) return false;
+//   }
+//   }
+//   return result.length === 0
+// }
+
+// let bracket = "{{{[{}]}}}";
+// console.log(BracketParis(bracket))

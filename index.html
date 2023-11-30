@@ -1372,9 +1372,7 @@ console.log(obj.get()); // Output: surya 23 salem
 //       console.log(S1, T1);
 //       if(!sToTMap.has(S1)){
 //         sToTMap.set(S1, T1);
-//       }else{
-//         if(sToTMap.get(S1) !== T1){
-//           return false;
+//       }urn false;
 //         }
 //       }
 
@@ -1393,6 +1391,172 @@ console.log(obj.get()); // Output: surya 23 salem
 // let t = "xxy";
 
 // console.log(isIsomorphic(s, t));
+
+// let word = "The word is not coming ddddddddddddddd".split(' ');
+// let LongestWords = " ".repeat(100);
+
+// for(let i = 0; i < word.length; i++){
+//   let LongWord = word[i].length;
+//   if(LongWord < LongestWords.length){
+//     LongestWords = word[i];
+//   }
+// }
+
+// console.log(LongestWords)
+
+
+
+// let n = 3;
+
+// function SpiralMatrix (n) {
+//    let arr = new Array(n).fill(0).map(() => new Array(n).fill(0))
+//    let top = 0;
+//    let left = 0;
+//    let right = n - 1;
+//    let bottom = n - 1;
+//    let count = 1;
+
+//    while(left <= right && top <= bottom) {
+//      for(let i = left; i <= right; i++){
+//         arr[top][i] = count++; 
+//      }
+//      top++
+
+//      for(let i = top; i <= bottom; i++){
+//        arr[i][right] = count++;
+//      }
+//      right --;
+
+//      for(let i = right; i >= left; i--){
+//        arr[bottom][i] = count++;
+//      }
+//      bottom --;
+
+//      for(let i = bottom; i >= top; i--){
+//        arr[i][left] = count++;
+//      }
+//      left ++;
+//    }
+//    return arr;
+//   }
+
+// console.log(SpiralMatrix(n))
+
+
+// function spiralMatrixIII(rows, cols, rstart, cstart) {
+//   let result = [];
+//   let step = 1;
+
+//   while (result.length < rows * cols) {
+//     // left to right
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart, cstart++);
+//     }
+
+//     // top to bottom
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart++, cstart);
+//     }
+//     step++;
+
+//     //  right to  left
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart, cstart--);
+//     }
+
+//     //  bottom to top
+//     for (let i = 0; i < step; i++) {
+//       validate(rstart--, cstart);
+//     }
+//     step++;
+//   }
+//   return result;
+
+//   function validate(row, column) {
+//     if (row < 0 || column < 0 || row >= rows || column >= cols) {
+//       return;
+//     }
+//     result.push([row, column]);
+//   }
+// }
+
+// let rows = 5,
+//   cols = 6,
+//   rStart = 1,
+//   cStart = 4;
+// console.log(spiralMatrixIII(rows, cols, rStart, cStart));
+
+
+
+// let arr = [1,2,3,4,5,6,22,0];
+// let first = Infinity;
+// let second = Infinity;
+
+// for(let i = 0; i < arr.length; i++){
+//    if(arr[i] < first){
+//     second = first
+//     first = arr[i];
+//    } else if (arr[i] < second && arr[i] !== first) {
+//      second = arr[i]
+//    }
+// } 
+
+
+// console.log(second);
+   
+// function findIndexDifference(N, arr) {
+//   let min = Infinity;
+//   let max = -Infinity;
+//   let minIndex = -1;
+//   let maxIndex = -1;
+
+//   // Iterate through the array to find the smallest and largest numbers
+//   for (let i = 0; i < N; i++) {
+//       if (arr[i] < min) {
+//           min = arr[i];
+//           minIndex = i;
+//           console.log(minIndex)
+//       }
+//       if (arr[i] > max) {
+//           max = arr[i];
+//           maxIndex = i;
+//           console.log(maxIndex)
+//       }
+//   }
+
+//   console.log(minIndex - maxIndex)
+
+//   // Calculate the difference between indices
+//   const indexDifference = Math.abs(maxIndex - minIndex);
+//   return indexDifference;
+// }
+
+// // Example usage:
+// const N = 7; // Size of the array
+// const numbers = [4, 2, 5, 7, 2, 8, 3]; // Array of integers
+// const difference = findIndexDifference(N, numbers);
+// console.log(difference);
+
+
+// let arr = [0,1,2,3,4,5,10];
+
+// function BinarySearch (arr) {
+//   let left = 0;
+//   let right = arr.length -1;
+
+//   while(left < right) {
+//     let mid = Math.floor((left + right) / 2);
+
+//     if(arr[mid] > arr[mid + 1]){
+//       left = mid + 1;
+//     }else{
+//       right = mid;
+//     }
+//   }
+//    return  arr[left] 
+// }
+
+// console.log(BinarySearch(arr));
 
     </script>
   </body>
