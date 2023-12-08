@@ -91,8 +91,8 @@
 
    ->unOrdered list
   * circle -> it gives circle (○) 
-  * square -> it gives circle (□)
-  * bullet -> it gives circle (•)
+  * square -> it gives square (□)
+  * bullet -> it gives dot (•)
   * none -> It not show anything before the listItem(li)
   -->
 
@@ -154,22 +154,30 @@
   wrap around the image
 
   Eg:
-    .para {
-        float: right; // if we need left inside use only float:left;
-        padding: 10px;
-        border: 3px solid #000;
-      }
+    
+    <style>
+      .para {
+       float: left; /* if we need left inside use only float:left; */
+      padding: 10px;
+      border: 3px solid #000;
+    }
 
-      .parent {
-        border: 2px solid black;
-        clear: right; // if we need left top means add the clear:left
-      }
+     .parent {
+       clear: left;
+     }
 
+    #done {
+      border: 2px solid black;
+    }
+
+    </style>
+    <div id="done">
     <div class="para">Div2</div>
-    <div class="parent">
-      Lorem ipsum, dolor sit amet consectetur 
-      adipisicing elit. Maxime, quasi.
-    </div>
+  <div class="parent">
+    Lorem ipsum, dolor sit amet consectetur 
+    adipisicing elit. Maxime, quasi.
+  </div>
+   </div>
 -->
 
 <!-- What is Selectors?
@@ -566,7 +574,15 @@
     * splice(): Adds or removes elements from an array at a specified index.
     * forEach(): Executes a provided function once for each array element.
     * map(): Creates a new array with the results of calling a provided function on every element.
+             The map() method in JavaScript is used to transform elements in an array. 
+             It iterates through each element of an array and creates a new array with 
+             the results of calling a provided function on every element in the original array.
+
     * filter(): Creates a new array with all elements that pass a test.
+                In JavaScript, array methods often include a filter() method, 
+                which is used to create a new array with elements that pass a certain condition. 
+                It doesn't modify the original array; rather, it creates a new array based on the criteria specified in a provided function.
+                
     * reduce(): Applies a function to an accumulator and each element to reduce the array to a single value.
 
   -> String
@@ -712,7 +728,7 @@
         document.body.innerHtml = div
       
       * XMLHttpRequest
-
+ 
         let url = 'https://jsonplaceholder.typicode.com/users'
 
         let http = new XMLHttpRequest();
@@ -869,7 +885,7 @@
 
     console.log(`Adding two numbers:  ${5 + 6}`);
 -->
-
+ 
 <!-- What Hoisting in javaScript ?
       
      Hoisting is a behavior in JavaScript where variable and function declarations are 
@@ -971,7 +987,7 @@
 <!--  What is Closure in Js?
 
       * Closure is function which return a another function by using inner 
-      * function we access the outer function. Even through outer function
+        function we access the outer function. Even through outer function
         execute long before the inner function stick around and remembers
         the values of outer function
 
@@ -1240,6 +1256,7 @@ console.log(obj.get()); // Output: surya 23 salem
     <title>Document</title>
   </head>
   <body>
+
     <script>
       //     const xmlRequest = new XMLHttpRequest();
       // xmlRequest.open("get","https://jsonplaceholder.typicode.com/users");
@@ -1277,7 +1294,7 @@ console.log(obj.get()); // Output: surya 23 salem
 
           // Recursion(5)
 
-          let n = 5;
+          // let n = 5;
 
 // for(let i = 0; i < n; i++){
 //   let start = "";
@@ -1372,7 +1389,8 @@ console.log(obj.get()); // Output: surya 23 salem
 //       console.log(S1, T1);
 //       if(!sToTMap.has(S1)){
 //         sToTMap.set(S1, T1);
-//       }urn false;
+//       }
+  //     return false;
 //         }
 //       }
 
@@ -1558,6 +1576,39 @@ console.log(obj.get()); // Output: surya 23 salem
 
 // console.log(BinarySearch(arr));
 
-    </script>
+
+
+
+// Money Patch ---> redlitmus company
+/*
+
+
+// Original function handling a money transaction
+function transferMoney(amount) {
+  console.log("Transferring amount: $" + amount);
+  // Code to perform the money transfer goes here
+}
+
+// Applying a "money patch" by creating a wrapped function
+function applyMoneyPatch(originalFunction) {
+  return function(amount) {
+    console.log("Patched function: Processing amount: $" + amount);
+    // Add your custom logic here if needed
+    return originalFunction(amount); // Invoking the original function
+  };
+}
+
+// Patching the money transfer function
+var patchedTransfer = applyMoneyPatch(transferMoney);
+
+// Using the patched function for money transfer
+patchedTransfer(100); // Invoking the patched function with an amount
+
+
+
+</script>
   </body>
 </html>
+
+
+*/ 

@@ -1,7 +1,7 @@
 // JAVASCRIPT DATA STRUCTURE AND ALGORITHM
 
 const { log } = require("console");
-const { channel } = require("diagnostics_channel");
+const { checkPrime } = require("crypto");
 
 // Math Algorithm
 
@@ -5167,12 +5167,10 @@ console.log("Maximum contiguous sum is", maxSubArraySum(a));
 
 // console.log(BinarySearch([-1,2,4,5,6], 2));
 
-
-
 // let arr = [1,2,3,4,2,3,4];
 
 // function FindingNonRepeating (arr) {
-     
+
 //   let map = new Map();
 //   let res = 0;
 
@@ -5198,21 +5196,16 @@ console.log("Maximum contiguous sum is", maxSubArraySum(a));
 
 // let arr = [1,2,3,4,5,111,111];
 
-
 // let i = 2;
 // let sum = 0;
 // let total = arr.reduce((a, b) => a + b);
 
-
-// while(total.toString().split('').length > i){ 
+// while(total.toString().split('').length > i){
 //   sum = total.toString().split('').map(Number).reduce((a, b) => a + b);
 //   i++
 // }
 
 // console.log(sum)
-
-
-
 
 // let output = sum.toString().split('').map(Number).reduce((a, b) => a + b)
 
@@ -5228,7 +5221,7 @@ console.log("Maximum contiguous sum is", maxSubArraySum(a));
 //   }
 
 //   for(let char of paris){
-//     if(stack[char]) result.push(char); 
+//     if(stack[char]) result.push(char);
 //     else {let lastOpenBracket = result.pop();
 //     if(stack[lastOpenBracket] !== char) return false;
 //   }
@@ -5238,3 +5231,998 @@ console.log("Maximum contiguous sum is", maxSubArraySum(a));
 
 // let bracket = "{{{[{}]}}}";
 // console.log(BracketParis(bracket))
+
+// block scoping
+//global scoping
+// function scoping
+
+// const name = "surya";
+// //redeclare
+// name = "sal"
+
+// console.log(name);
+
+// function Bio () {
+//   // let name = "hulk";
+
+//   console.log(name);
+// }
+
+// Bio();
+
+// var name = "surya";
+
+// let name = "sal";
+
+// name = "surya"
+
+// const name = "hulk"
+
+// name = "sal"
+
+// console.log(name)
+
+// var --> global scope
+// let --> block  scope
+// const --> block scope
+
+// var h = "hi";
+// var h = "hi";
+
+// console.log(h)
+
+// let s = "hlw"
+// let s = "hello";
+
+// console.log(s)
+
+// const q = "g"
+// const q = "g"
+
+// // q ="GG"
+
+// // console.log(q)
+
+// let arr = [1,2,3,4,5];
+// let result = [];
+
+// console.log(arr.map((dal) =>{
+//    if(dal % 2 === 0) return dal
+// }))
+
+// console.log(arr.filter((data) => data % 2 === 0))
+
+// let n = 5;
+
+// for(let i = 0; i > n; i++){
+//   console.log(n)
+// }
+
+// console.log(arr.map((curr, index, values) => values))
+
+/* 
+
+  * map(): Creates a new array with the results of calling a provided function on every element.
+             The map() method in JavaScript is used to transform elements in an array. 
+             It iterates through each element of an array and creates a new array with 
+             the results of calling a provided function on every element in the original array
+  * filter(): Creates a new array with all elements that pass a test.
+                In JavaScript, array methods often include a filter() method, 
+                which is used to create a new array with elements that pass a certain condition. 
+                It doesn't modify the original array; rather, it creates a new array based on the criteria specified in a provided function.
+               
+
+
+function regularFunction(a, b) {
+  return a + b;
+}
+Declared using the function keyword.
+Has its own this context and is suitable for object methods.
+Has its own arguments object.
+this is dynamically scoped.
+
+
+
+const arrowFunction = (a, b) => {
+  return a + b;
+};
+Declared using arrow => syntax.
+Does not have its own this context; it uses the this value from the surrounding code.
+Does not have its own arguments object.
+this is lexically scoped (it uses the this value from its surrounding code).
+
+
+
+What Hoisting in javaScript ?
+      
+     Hoisting is a behavior in JavaScript where variable and function declarations are 
+     moved to the top of their containing scope during compilation, allowing them to be 
+     accessed before their actual placement in the code
+
+  -> Var hoisting
+
+     console.log(myVar); // Outputs: undefined
+     var myVar = 10;
+     console.log(myVar); // Outputs: 10
+  
+  -> function hoisting
+
+     foo(); // Outputs: "Hello from foo!"
+     function foo() {
+       console.log("Hello from foo!");
+     }
+
+  -> anonymous function 
+
+     bar(); // Throws an error: bar is not a function
+     var bar = function() {
+     console.log("Hello from bar!");
+   };
+
+
+  -> var
+     Declares a variable, optionally initializing it to a value.(global,block)
+   
+  -> let
+     Declares a block-scoped, local variable, optionally initializing it to a value.
+   
+  -> const
+     Declares a block-scoped, read-only named constant.
+
+
+
+     <!-- spread and rest
+    
+    * The spread operators denote three(...) they are used to segregate the array 
+       into individual elements
+  
+      let a = [1,3,4,5,5];
+  let b = ["sura","era","meera"];
+  
+  let total_arr = [...a, ...b]
+  
+  console.log(...total_arr)
+ 
+  * The Rest operators denote three(...)dots it allows to capture multiple function 
+    argument into an array
+  *  They used treat individual arguments passed to the function as combined array
+    in the function parameter
+  function add (...a); 
+     let sum = 0
+     console.log(a)
+    -> for loop
+      for(let i = 0; i < a.length;i++){
+       sum += a[i]
+      }
+  
+    -> map 
+     a.map((item) => {
+       return sum += item
+     })
+     return sum
+    
+    -> for of array
+     for(let arr of a){
+       console.log(arr)
+       sum += arr
+     }
+     return sum
+  
+  
+  console.log(add(...a))
+
+
+
+  <!-- Async and await?
+
+    -> async 
+       * It is used to declare a function as asynchronous, allowing it to use the await keyword inside. 
+       * An async function always returns a promise.
+
+    -> await  
+       * It is used within an async function to pause the execution of the function until a promise is resolved. 
+       * This makes asynchronous code look more like synchronous code, improving readability and maintainability.
+
+
+    What is JavaScript?
+           Javascript is high-level Interpreter programming language
+      that primary use for web development.It allows the developer 
+      to add interactivity and dynamic behavior(some actions -> clicking btn)
+      to the website
+
+      -> option
+     * Javascript is execute by the web browser make client
+      side scripting language.
+     * It enables the client side script to interact with 
+       user,control the web browser communicate asynchronously.
+
+
+
+    useState  : Manages state within functional components, allowing you to declare state variables and update them.
+
+    useEffect  : Performs side effects in functional components after render, such as data fetching, subscriptions, or DOM manipulations.
+    
+    useContext  : Accesses React's context and subscribes to its changes within a functional component.
+    
+    useReducer  : Alternative to useState for managing more complex state logic using a reducer function.
+    
+    useCallback  : Memoizes callbacks, preventing unnecessary re-renders in child components.
+    
+    useMemo  : Memoizes expensive calculations, optimizing performance by caching computed values.
+    
+    useRef  : Provides a mutable ref object whose .current property can hold a mutable value, persisting across renders.
+    
+    useImperativeHandle  : Customizes the instance value that is exposed when using ref with useRef.
+    
+    useLayoutEffect  : Similar to useEffect, but fires synchronously after all DOM mutations, which can be helpful for measuring DOM elements.
+    
+    useDebugValue  : Provides a way to display a label for custom hooks in React DevTools.
+*/
+
+// String.includes()
+// String.startsWith()
+// String.endsWith()
+// Array.from()
+// Array keys()
+// Array find()
+// Array findIndex()
+// New Math Methods
+// New Number Properties
+// New Number Methods
+// New Global Methods
+// Object entries
+
+// let sting = "hello";
+// let output = [];
+// console.log(sting.length);
+
+// for(let i = 0; i < sting.length; i++){
+//    let vowels = "aeiou";
+//    if(vowels.includes(sting[i])) output.push(i);
+// }
+
+// console.log(output);
+
+// let sting = " hello ";
+
+// console.log(sting.startsWith("o"))
+// console.log(sting.endsWith("o"));
+
+// console.log(Array.from(sting))
+
+// let obj = {
+//   name : " surya",
+//   age : 23
+// }
+
+// let {...arr} = {...obj};
+
+// console.log(arr.age)
+
+// let arr = [1,2,3,4,5,6,7,8,9,];
+
+// let [N, M, ...remain] = [...arr];
+
+// console.log(N, M, remain)
+
+// console.log(arr)
+
+// console.log(sting.trim())
+
+// let a = null;
+
+// a = 10
+// console.log(a)
+
+// let arr_1 = [1,2,4];
+// let arr_2 = [5,6,7];
+
+// console.log([...arr_1, ...arr_2])
+
+// let arr = [1,3,4,5];
+// let res = [];
+// for(let i = 0; i < arr.length; i++){
+//   // if(arr[i] % 2 == 0) {
+//   //   res.push(arr[i]);
+//   // }
+//   if((arr[i] & 1) === 0){
+//     res.push(arr[i]);
+//   }
+// }
+
+// console.log(res)
+
+// console.log(3 * 3)
+// let n = 3;
+// let m = 3;
+// let sum = 0;
+
+// for(let i = 0; i < n; i++){
+//    sum += m;
+// }
+
+// console.log(sum)
+
+// let str = ""
+//
+
+// let arr = [1, 2, 3, 4, 5];
+// let target = 10;
+
+// function TwoPointer(arr, target) {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   let sum = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log(sum.push(arr[i]));
+//     sum.push(arr[i] + arr[i]);
+//   }
+
+//   return sum.includes(target) ? `yes` : "no";
+// }
+
+// console.log(TwoPointer(arr, target));
+
+// function TwoPointer(arr, target) {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   arr.sort((a, b) => a - b); // Sort the array to use two pointers
+
+//   while (left < right) {
+//     let currentSum = arr[left] + arr[right];
+
+//     if (currentSum === target) {
+//       return 'yes'; // Found the pair summing up to the target
+//     } else if (currentSum < target) {
+//       left++; // Move the left pointer to increase the sum
+//     } else {
+//       right--; // Move the right pointer to decrease the sum
+//     }
+//   }
+
+// //   while(left < right){
+// //     let currArr = arr[left] + arr[right];
+// //   console.log(currArr)
+// //     if(currArr === target){
+// //       return "yes"
+// //     }else if (currArr < target){
+// //       left ++
+// //     }else {
+// //       right --
+// //     }
+// //   }
+// //   return 'no'; // No pair found
+// }
+
+// function TwoPointer(arr, target) {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     let currArr = arr[left] + arr[right];
+//     if (currArr === target) return "yes";
+//     else if (currArr < target) left++;
+//     else right--;
+//   }
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// let target = 5;
+// console.log(TwoPointer(arr, target));
+
+// function MaxSubArray(nums) {
+//   // let max = nums[0];
+//   // let cur = 0;
+
+//   // for(let i = 0; i < nums.length; i++) {
+//   //     cur += nums[i];
+
+//   //     if(cur > max) max = cur
+//   //     if(cur < 0) cur = 0
+//   // }
+
+//   // return max;
+//   // let max = nums[0];
+//   // let min = nums[0];
+
+//   // for (let i = 1; i < arr.length; i++) {
+//   //   max = Math.max(arr[i] , max + arr[i]);
+//   //   min = Math.max(min, max)
+//   // }
+//   // return min
+
+//   // let max = nums[0];
+//   // let curr = 0;
+
+//   // for(let i = 0; i < arr.length; i++){
+//   //   curr += arr[i];
+
+//   //   if(curr > max){
+//   //     max = curr
+//   //   }
+//   //   if(curr < 0) curr = 0;
+//   // }
+//   // return curr
+
+//   // let res = arr[0];
+//   // let Max = arr[0];
+//   // let Min = arr[0];
+
+//   // for(let i = 0; i < arr.length; i++){
+//   //   let option = [arr[i], Max * arr[i] , Min * arr[i]];
+//   //   Max = Math.max(...option);
+//   //   Min = Math.min(...option);
+
+//   //   res = Math.max(res, Max)
+//   // }
+//   // return res
+
+//   if(nums.length === 0) return 0;
+
+//    let result = nums[0];
+//    let max = nums[0];
+//    let min = nums[0]
+
+//   for(let i = 1; i < nums.length; i++){
+//      let options = [nums[i], max * nums[i], min * nums[i]];
+//      max = Math.max(...options);
+//      min = Math.min(...options);
+
+//      result = Math.max(result, max)
+//   };
+
+//   return result;
+// }
+
+// let arr = [2,3,-2,4];
+// console.log(MaxSubArray(arr));
+
+// [3, -4, 2, -3, -1, 7, -5];
+
+// function PrimeNumber (arr) {
+//   if(arr < 2) return false;
+
+//   let result = [];
+
+//   for(let i = 2; i <= Math.sqrt(arr); i++){
+//     if(arr % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// let arr = [1,2,3,4,5,7,6,11];
+// function CheckPrime (arr) {
+//   let result = [];
+
+//   for(let i = 0; i < arr.length; i++){
+//      if(PrimeNumber(arr[i])){
+//         result.push(arr[i])
+//      }
+//   }
+//   return result
+// }
+
+// console.log(CheckPrime(arr))
+
+// function isPrimeNumber(arr) {
+//   if (arr.length < 2) return false;
+
+//   let isPrime = new Array(arr + 1).fill(true);
+//   isPrime[0] = isPrime[1] = false;
+//   let Prime = [];
+
+//   for (let i = 2; i * i < arr.length; i++) {
+//     if (isPrime[i]) {
+//       for (let j = i * i; j < arr.length; j += i) {
+//         isPrime[j] = false;
+//       }
+//     }
+//   }
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (isPrime[arr[i]]) {
+//       Prime.push(arr[i]);
+//     }
+//   }
+
+//   return Prime;
+// }
+
+// let arr = [1, 2, 3, 4, 5, 7, 6, 11];
+// console.log(isPrimeNumber(arr));
+
+// function isPrimeNumber(arr) {
+//   if (arr.length < 2) return [];
+
+//   // let n = Math.max(...arr) + 1;
+//   let isPrime = new Array(arr.length).fill(true);
+//   isPrime[0] = isPrime[1] = false;
+//   let Prime = [];
+
+//   for (let i = 2; i * i < arr.length; i++) {
+//     if (isPrime[i]) {
+//       for (let j = i * i; j < arr.length; j += i) {
+//         isPrime[j] = false;
+//       }
+//     }
+//   }
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (isPrime[arr[i]]) {
+//       Prime.push(arr[i]);
+//     }
+//   }
+
+//   return Prime;
+// }
+
+// let arr = [1, 2, 3, 4, 5, 7, 6, 11];
+// console.log(isPrimeNumber(arr));
+
+// let arr = [-1,2,3,4,5,10];
+// let target = 0;
+
+// function BinarySearch (arr, target) {
+//    let left = 0;
+//    let right = arr.length -1;
+
+//   //  while(left < right){
+//   //   let curr = arr[left] + arr[right]
+//   //   if(curr === target){
+//   //      return "yes"
+//   //   }else if(curr < right){
+//   //     left++
+//   //   }else{
+//   //     right--;
+//   //   }
+//   //  }
+//   //  return "no"
+
+//   while(left < right){
+//     let mid = Math.floor((left + right) / 2);
+
+//     if(arr[mid] > arr[right]){
+//       left = mid + 1
+//     }else {
+//       right = mid - 1
+//     }
+//   }
+//   return arr[left]
+// }
+
+// console.log(BinarySearch(arr,target))
+
+// function Palindromes (words) {
+//    if(words.length < 2) return false;
+//    let str = ""
+//    for(let i = words.length -1; i >= 0; i--){
+//     str += words[i]
+//    }
+
+//    return words.join('') === str ? true : false
+// }
+
+// let words = "gtg".split('');
+// console.log(Palindromes(words))
+
+// function isAnagram (word_1, word_2) {
+//    if(word_1.length !== word_2.length) return false;
+
+//    let sorting_1 = word_1.split('').sort().join('');
+//    let sorting_2 = word_2.split('').sort().join('');
+
+//    return sorting_1 === sorting_2 ? true : false;
+// }
+
+// let word_1 = "slient";
+// let word_2 = "listen";
+
+// console.log(isAnagram(word_1, word_2))
+
+// function FindDuplicateWords (words) {
+//   let map = new Map();
+//   let result = [];
+
+//   for(let i = 0; i < words.length; i++){
+//     let totalWord = words[i];
+//     if(map.has(totalWord)){
+//       map.set(totalWord, map.get(totalWord) + 1);
+//     }else{
+//       map.set(totalWord, 1);
+//     }
+//   }
+
+//   map.forEach((num, values) => {
+//     if(num === 1) {
+//       result.push(values)
+//     }
+//   })
+//   return result.join('')
+// }
+
+// let word = "ssafvdd".split('');
+// console.log(FindDuplicateWords(word))
+
+// function isIsomorphic(s, t) {
+//   if (s.length !== t.length) return false;
+
+//   let sToMap = new Map();
+//   let tToMap = new Map();
+
+//   for (let i = 0; i < s.length; i++) {
+//     let CharS = s[i];
+//     let CharT = t[i];
+
+//     if (!sToMap.has(CharS)) {
+//       sToMap.set(CharS, CharT);
+//     } else if (sToMap.get(CharS) !== CharT) {
+//         return false;
+      
+//     }
+
+//     if (!tToMap.has(CharT)) {
+//       tToMap.set(CharT, CharS);
+//     } else if (tToMap.get(CharT) !== CharS) {
+//         return false;
+//       }
+//     }
+
+//     return true
+//   }
+
+
+// let s = "aac".split("");
+// let t = "xxy".split("");
+
+// console.log(isIsomorphic(s, t));
+
+
+// let n = 5;
+
+// for(let i = n - 1; i >= 0; i--){
+//   let str = " "
+//   for(let j = i; j < n; j++){
+//     str += " *"
+//   }
+
+//   console.log(str);
+// }
+
+// function MaxSubArray (arr) {
+//   let left = arr[0];
+//   let right = arr[0]; 
+
+//   for(let i = 0; i < arr.length; i++){
+//     right = Math.max(arr[i], right + arr[i]);
+//     left = Math.max(left , right);
+//   }
+//   return left;
+// }
+
+// let arr = [0,1,2,3,2,5,6];
+
+// console.log(MaxSubArray(arr));
+
+
+// let arr = [1,2,3,-2,5];
+// let sum = 0;
+// for(let i = 0; i < arr.length; i++){
+//   sum += arr[i];
+// }
+
+// console.log(sum);
+
+
+// function minimumSwaps(arr) {
+//   const n = arr.length;
+//   const positions = [];
+//   let swaps = 0;
+
+//   // Create an array of positions indicating the original indices of elements
+//   // for (let i = 0; i < n; i++) {
+//   //   positions[arr[i]] = i;
+//   // }
+
+//   for(let i = 0; i < n; i++){
+//     positions[arr[i]] = i;
+//   }
+
+//   // Iterate through the array to check if elements are at their correct positions
+//   // for (let i = 0; i < n; i++) {
+//   //   // If the element is not at its correct position, swap it
+//   //   if (arr[i] !== i + 1) {
+//   //     swaps++;
+//   //     const temp = arr[i];
+//   //     arr[i] = i + 1;
+//   //     arr[positions[i + 1]] = temp;
+
+//   //     // Update positions array after swapping
+//   //     positions[temp] = positions[i + 1];
+//   //     positions[i + 1] = i;
+//   //   }
+//   // }
+
+//   for(let i = 0; i < n; i++){
+//     if(arr[i] !== i + 1){
+//       swaps++;
+//       const temp = arr[i];
+
+//       arr[positions[i + 1]] = temp;
+
+//       positions[temp] = positions[i + 1];
+
+//       positions[i + 1] = i;
+
+//     }
+//   }
+
+//   return swaps;
+// }
+
+// // Example usage
+
+
+
+// const students =[1 ,5 ,4 ,3 ,2];
+// console.log(minimumSwaps(students)); // Output: 3
+
+
+
+
+
+// function findSmallestDivisible(L, R) {
+//   // Function to calculate the greatest common divisor (GCD) using Euclidean algorithm
+//   const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+
+//   // Calculate the least common multiple (LCM) using the formula: LCM = (L * R) / GCD(L, R)
+//   const lcm = (L * R) / gcd(L, R);
+
+//   return lcm;
+// }
+
+// // Example usage
+// const L = 10;
+// const R = 130;
+// console.log(findSmallestDivisible(L, R)); // Output: 36
+
+
+/*
+What is the difference between let and const?
+What is the difference between a function declaration and a function expression?
+What is hoisting in JavaScript?
+What is the difference between == and ===?
+What are closures in JavaScript?
+What is the prototype chain in JavaScript?
+What is inheritance in JavaScript?
+What is polymorphism in JavaScript?
+What is encapsulation in JavaScript?
+What is modularity in JavaScript?
+What is a promise in JavaScript?
+What is an async function in JavaScript?
+What is a generator function in JavaScript?
+What is a proxy in JavaScript?
+What is a Reflect object in JavaScript?
+What is a WeakMap object in JavaScript?
+What is a WeakSet object in JavaScript?
+What is the difference between a class and a function in JavaScript?
+What are the different ways to create an object in JavaScript?
+What are the different ways to iterate over an object in JavaScript?
+What are the different ways to add a property to an object in JavaScript?
+What are the different ways to remove a property from an object in JavaScript?
+What are the different ways to check if a property exists on an object in JavaScript?
+What are the different ways to get the value of a property from an object in JavaScript?
+What are the different ways to set the value of a property on an object in JavaScript?
+*/
+
+
+
+// let [n , m] = [2,4];
+
+// let difference = n - m;
+
+// console.log(difference % 2 === 0 ? "even" : "odd");
+
+
+
+// function isPrime (arr) {
+//   if(arr.length < 2) return false;
+
+
+//   for(let i = 2; i <= Math.sqrt(arr); i++){
+//     if(arr % i === 0){
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+
+
+
+
+
+
+
+// let arr = [1,2,3,4,5,11,4,6,7];
+
+// function PrimeNumber (arr) {
+
+//   let result = []
+
+//   for(let i = 1; i < arr.length; i++){
+//     if(isPrime(arr[i])){
+//      result.push(arr[i])
+//     }
+//   }
+
+//   return result
+// }
+
+// console.log(PrimeNumber(arr));
+
+
+
+// let n = 5;
+// let  k = 4;
+// let sum = 0;
+
+// for(let i = 0; i < n; i++){
+//   sum += k
+// }
+
+// console.log(sum);
+
+// let arr = [1,2,3,4,5, 8,9];
+// let result = [];
+
+// for(let i = 0; i < arr.length; i++){
+//    if((arr[i] & 1)){
+//     result.push(arr[i]);
+//    }
+// }
+
+// console.log(result);
+
+
+// function Outer () {
+//   let a = 10;
+//   return function inner () {
+//    return a + a;
+//   }
+// }
+
+// let output = Outer();
+
+// console.log(output())
+
+// console.log(a)
+// console.log(b)
+// console.log(c)
+
+
+
+// console.log(add());
+
+// var a = 10;
+
+// function add () {
+//   return 5 + 5;
+// }
+  
+// let  b = 10;
+
+// const c = 10;
+
+// let words = ""
+
+// function isPrime (arr) {
+//    if(arr < 2) return false;
+
+//    for(let i = 2; i <=  Math.sqrt(arr); i++){
+//     if(arr % i === 0){
+//       return false;
+//     }
+//    }
+//    return true
+// }
+
+
+// function PrimeNumber (arr) {
+//   let result = [];
+
+//   for(let i = 0; i <= arr; i++){
+//     if(isPrime(i)){
+//      result.push(i);  
+//     }
+//    }
+ 
+//    return result;
+// }
+// let arr = 2;
+// console.log(PrimeNumber(arr))
+
+// let arr = [1,2,3,4,5];
+//     let total = [[1,2],[5,6],[2,3]]
+    
+//     console.log(Object.assign({}, arr))
+//     console.log({...arr})
+//     console.log(Object.entries(total))
+
+
+
+
+// let k = 2;
+// let result = [];
+
+// for(let i = 0; i < arr.length; i++){
+//   let rotate = (i + k) % arr.length;
+
+//   result[rotate] = arr[i];
+// }
+
+// console.log(result);
+
+// let arr = [3,4,5,1,2,0,-1,6,-2];
+
+// function secondLargest (arr) {
+   
+//   if(arr.length < 2) return false;
+
+//   let first = Infinity;
+//   let second = Infinity;
+
+//   for(let i = 0; i < arr.length; i++){
+//     if(arr[i] < first){
+//       second = first
+//       first = arr[i];
+//     }else if(arr[i] < second && arr[i] !== first){
+//       second = arr[i];
+//     }
+//   }
+//   return second;
+// }
+
+// console.log(secondLargest(arr))
+
+// let word = "hello suavnvafva kkkkkkkkkkkkkkkkkkkkkkkkkkk".split(' ');
+// let wordsLength = "";
+
+// for(let i = 0; i < word.length; i++){
+//   let totalLength = word[i].length;
+//   if(totalLength > wordsLength.length){
+//     wordsLength = word[i];
+//   }
+// }
+// console.log(wordsLength);
+
+
+// let arr = [1,2,2,4,5,6];
+// let min = -Infinity;
+
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] > min){
+//     min = arr[i];
+//   }
+// }
+
+// console.log(min);
+
+let sum = 5;
+// let factorial = 1;
+
+// for(let i = 1; i <= sum; i++){
+//    factorial *= i 
+// }
+// console.log(factorial);
+
+// for(let i = sum - 1; i >= 0; i--){
+//   let str = "";
+//   for(let j = i;  j < sum; j++){
+//     str += "* "
+//   }
+//   console.log(str);
+// }
